@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor Usuario as U
+U -> Interfaz: escoge una pregunta
+Interfaz --> Servidor: Envía Pregunta
+database Mongo
+Servidor  --> Mongo: Consulta pregunta
+Mongo--> Servidor: Devuelve Pregunta
+Servidor  --> Mongo: Actualiza pregunta
+Servidor  --> Interfaz: Devuelve Mensaje
+Interfaz --> U: Muestra Mensaje de actualizacion
+
+@enduml

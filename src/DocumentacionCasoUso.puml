@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+skinparam actorStyle awesome
+left to right direction
+:Ususario: as U
+note left of U : Usuario final.
+package Preguntas_Sofka{
+usecase "Crear Pregunta" as CP
+usecase "Leer Pregunta" as LP
+usecase "Actualizar Pregunta" as AP
+usecase "Eliminar pregunta" as EP
+usecase "Leer multiples preguntas" as LMP
+usecase "Responder pregunta" as RP
+usecase "Leer respuestas de pregunta" as LRDP
+}
+
+U-->CP
+U-->LP
+U-->AP
+U-->EP
+U-->LMP
+U-->RP
+U-->LRDP
+
+@enduml
